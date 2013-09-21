@@ -1,5 +1,9 @@
 <div class="container">
-  <h1>Login:</h1>
+<h1>Login:</h1>
+
+  <% if @user && @user.errors.any? %>
+  <%= erb :_errors, layout: false %>
+  <% end %>
 
 <form action="/login" method="POST" name="signup">
   <div>

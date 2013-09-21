@@ -23,14 +23,15 @@ get '/results/:user_id' do
 end
 
 
-
 ############ POST ###################
 
 post '/signup' do
   @user = User.new(params[:user])
-  # @user.password = params[:user][:password]
-  @user.save!
-  erb :login
+  if @user.save
+    erb :login
+  else
+    erb :index
+  end
 end
 
 post '/login' do
@@ -39,7 +40,9 @@ post '/login' do
     session[:id] = @user.id
     redirect '/welcome'
   else
-    redirect '/login'
+    @user = User.new
+    @user.errors[:base] = "We didn't like that. Try again."
+    erb :login
   end
 end
 

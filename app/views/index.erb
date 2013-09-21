@@ -42,7 +42,12 @@
 <!-- <h1>Welcome to Flashcards!</h1>
 <h3>Brought to you by Group 6 #thelight</h3>
 
+  <% if @user && @user.errors.any? %>
+  <%= erb :_errors, layout: false %>
+  <% end %>
+
 <form action="/signup" method="POST" name="signup">Signup Form
+
 <div>
   <label for="name">Name</label>
   <input id="name" type="text" name="user[name]">
