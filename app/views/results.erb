@@ -1,0 +1,20 @@
+<nav>
+  <a class="logo" href="#">Logo</a>
+  <ul>
+    <li><a href="#">Change Password</a></li>
+    <li><a href="#">View Past Results</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</nav>
+
+<h1> Your results</h1>
+<ul>
+  
+  <% @user_games.each do |x| %>
+ <% correct = x.guesses.where(response: "true").count %>
+  <% total = x.guesses.count %>
+  <li><%= correct.to_f/total.to_f %></li>
+ <%  end %>
+
+
+</ul>

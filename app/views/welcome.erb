@@ -1,0 +1,18 @@
+<nav>
+  
+  <ul>
+    <li><a href="#">Change Password</a></li>
+    <li><a href="#">View Past Results</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</nav>
+
+<h1>Welcome User!</h1>
+
+<h2>Select a Deck!</h2>
+<ul class="game">
+  <% @decks.each do |deck| %>
+  <li><a href="game/<%= deck.id %>"><%= deck.name %></a></li>
+  <% end %>
+</ul>
+
