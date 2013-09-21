@@ -1,10 +1,14 @@
 Need to accomplish
-
-
 - ensure if no login details or signup info entered, loops back and doesn't let pass to another page
+- login/logout per session status
+- update top bar for login/logged in
+
+
 - If no cards in deck, some sort of error message and loops back (also test for
   other unconnected pages/bridges/errors)
 - When quiz is over, redirect to results page\
-- login/logout per session status
-- update top bar for login/logged in
+
+
 - update password (optional)
+
+fix no usernmae bug

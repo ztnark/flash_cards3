@@ -3,18 +3,19 @@ get "/login" do
   erb :login
 end
 
-get '/welcome' do
-  erb :welcome
-end
-
 get '/logout' do
   session.clear
   redirect '/'
 end
 
 get '/results/:user_id' do
- @user_games = User.find(params[:user_id]).games.all
- erb :results
+  if !session[:id].nil?
+    @user_games = User.find(params[:user_id]).games.all
+     erb :results
+  else
+    redirect '/login'
+  end
+
 end
 
 
