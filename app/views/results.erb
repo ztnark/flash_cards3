@@ -1,14 +1,15 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="http://code.highcharts.com/highcharts.js"></script>
 
+
 <nav>
-  <a class="logo" href="#">Logo</a>
+  <a class="logo" href="/welcome">Logo</a>
   <ul>
-    <li><a href="#">Change Password</a></li>
-    <li><a href="#">View Past Results</a></li>
+    <li><a href="/results/<%= session[:id]%>">View Past Results</a></li>
     <li><a href="/logout">Logout</a></li>
   </ul>
 </nav>
+
 
 <h1> Your results</h1>
 <ul>
@@ -23,8 +24,6 @@
   <li> Game ID: <%= x.id%> Deck: <%=x.deck.name.capitalize%> Score: <%= percent %>%</li>
  <%  end %>
 
- <%= scores %>
-
 </ul>
 <script>
 $(function () {
@@ -34,21 +33,16 @@ $(function () {
                 x: -20 //center
             },
     
-            xAxis: {
-                categories: [1,2]
-            },
+          
             yAxis: {
                 title: {
-                    text: 'Score'
+                    text: 'Games Played'
                 },
                 plotLines: [{
                     value: 0,
                     width: 1,
                     color: '#808080'
                 }]
-            },
-            tooltip: {
-                valueSuffix: '°C'
             },
             legend: {
                 layout: 'vertical',
@@ -57,8 +51,8 @@ $(function () {
                 borderWidth: 0
             },
             series: [{
-                name: 'Average',
-                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                name: 'Goal',
+                data: [75,77,80,82,86,90,97]
             }, {
                 name: 'You',
                 data: <%= scores %>
