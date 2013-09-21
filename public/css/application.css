@@ -1,15 +1,148 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+@font-face {
+    font-family: 'pacifico';
+    src: url('pacifico-webfont.eot');
+    src: url('pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pacifico-webfont.woff') format('woff'),
+         url('pacifico-webfont.ttf') format('truetype'),
+         url('pacifico-webfont.svg#pacificoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
+@font-face {
+    font-family: 'opensansbold';
+    src: url('opensans-bold-webfont.eot');
+    src: url('opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-bold-webfont.woff') format('woff'),
+         url('opensans-bold-webfont.ttf') format('truetype'),
+         url('opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'opensanslight';
+    src: url('opensans-light-webfont.eot');
+    src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-light-webfont.woff') format('woff'),
+         url('opensans-light-webfont.ttf') format('truetype'),
+         url('opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'opensansreg';
+    src: url('opensans-regular-webfont.eot');
+    src: url('opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-regular-webfont.woff') format('woff'),
+         url('opensans-regular-webfont.ttf') format('truetype'),
+         url('opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container {
+  margin: 60px auto;
+  width: 85%;
+  padding: 0px 20px 20px 20px;
+  border: 2px solid #B4F200;
+  background: white;
+}
+
 th {
   text-align: left;
 }
 
-.question{
-  width: 600px;
-  height: 300px;
-  background: #eee;
+body{
+  background: #91BF47 url('retina_wood.png');
 }
+
+.front_end{
+  background: #91BF47 url('retina_wood.png');
+}
+  .front_end h1{
+    width: 900px;
+    margin: 125px auto 0;
+    position: relative;
+    font: normal 150px pacifico;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 7px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+    .front_end span{
+      position: absolute;
+      top: 30px;
+      left: 50px;
+      padding: 20px;
+      border-radius: 100px;
+      background: red;
+      font-size: 24px;
+
+      background: rgb(255,63,82); /* Old browsers */
+      background: -moz-linear-gradient(top,  rgba(255,63,82,1) 0%, rgba(214,10,14,1) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,63,82,1)), color-stop(100%,rgba(214,10,14,1))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(255,63,82,1) 0%,rgba(214,10,14,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(255,63,82,1) 0%,rgba(214,10,14,1) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(255,63,82,1) 0%,rgba(214,10,14,1) 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  rgba(255,63,82,1) 0%,rgba(214,10,14,1) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3f52', endColorstr='#d60a0e',GradientType=0 ); /* IE6-9 */
+    }
+  .login{
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px 0 50px 0;
+    background: #fff;
+    border-radius: 5px;
+
+    -moz-box-shadow:    0 1px 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow:         0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+    .login h2{
+      margin: 0 0 20px 40px;
+      font: normal 24px opensanslight;
+      color: #777;
+    }
+    .login form input[type=text], .login form input[type=password]{
+      width: 300px;
+      height: 30px;
+      margin: 5px auto;
+      padding: 5px 7px 5px 7px;
+      background: #e5e5e5;
+      border: none;
+      border-radius: 5px;
+      display: block;
+
+      -moz-box-shadow:    inset 0 0 10px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+      box-shadow:         inset 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .login_button{
+      width: 314px;
+      height: 40px;
+      margin: 10px auto;
+      font: bold 20px arial;
+      padding: 0;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      color: #fff;
+      font-family: opensansbold;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      background: #2BC0FF;
+
+      -moz-box-shadow:    0 3px 0 #2F9DCC;
+      -webkit-box-shadow: 0 3px 0 #2F9DCC;
+      box-shadow:         0 3px 0 #2F9DCC;
+    }
+      .login_button:hover{
+        background: #FF6600;
+        -moz-box-shadow:    0 3px 0 #CC621B;
+        -webkit-box-shadow: 0 3px 0 #CC621B;
+        box-shadow:         0 3px 0 #CC621B;
+      }
