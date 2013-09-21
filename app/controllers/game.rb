@@ -30,7 +30,7 @@ get '/game/question/:id' do
       @card = Card.find(id_array[card_number])
       erb :question
     else
-      redirect '/'
+      redirect "/results/#{session[:id]}"
     end
   else
     redirect '/login'
