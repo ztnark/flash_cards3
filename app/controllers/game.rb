@@ -8,13 +8,21 @@ get '/welcome' do
     redirect '/login'
   end
 end
-
+    # if card_count == 0
+    #   @game.deck.errors.[:base] = "This deck has no cards.."
+    #   erb :welcome
+    # elsif card_number < card_count
 
 get '/game/:id' do
   if !session[:id].nil?
     @game = Game.create(deck_id: params[:id], user_id: session[:id])
     @card = @game.deck.cards.first
-    erb :question
+    if @card == nil
+      @game.deck.errors[:base] = "This deck has no cards.."
+      erb :welcome
+    else
+      erb :question
+    end
   else
     redirect '/login'
   end
