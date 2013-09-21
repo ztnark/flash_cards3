@@ -1,6 +1,46 @@
 
-<h1>Welcome to Flashcards!</h1>
-<p>Brought to you by Group 6 #thelight</p>
+
+<!DOCTYPE html>
+</div>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title>Super Flash Cards</title>
+</head>
+
+<body class="front_end">
+  <h1>Flash Cards <span class="beta_tag">Beta</span></h1>
+  
+  <div class="login">
+    <h2>Login & Sign Up</h2>
+
+    <form action='/login' method="POST">
+      <input type="text" name="user[email]" placeholder="Email Address">
+      <input type="password" name="user[password]" placeholder="Password">
+      <input type="submit" class="login_button" value="Boom!">
+    </form>
+    <a href="/signup">Sign up!</a>
+  </div>
+</body>
+</html>
+
+
+
+<!-- <h1>Welcome to Flashcards!</h1>
+<h3>Brought to you by Group 6 #thelight</h3>
 
   <% if @user && @user.errors.any? %>
   <%= erb :_errors, layout: false %>
@@ -21,5 +61,4 @@
   <input id="password" type="password" name="user[password]">
 </div>
 <input type="submit">
-</form>
-
+</form> -->

@@ -1,11 +1,12 @@
+
 <nav>
-  <a class="logo" href="#">Logo</a>
+  <a class="logo" href="/welcome">Logo</a>
   <ul>
-    <li><a href="#">Change Password</a></li>
-    <li><a href="#">View Past Results</a></li>
+    <li><a href="/results/<%= session[:id]%>">View Past Results</a></li>
     <li><a href="/logout">Logout</a></li>
   </ul>
 </nav>
+
 
 <div class="game_view">
   <div class="question">

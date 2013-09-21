@@ -3,6 +3,10 @@ get "/login" do
   erb :login
 end
 
+get '/signup' do
+  erb :signup
+end
+
 get '/logout' do
   session.clear
   redirect '/'
