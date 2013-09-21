@@ -3,6 +3,9 @@
 <p>Brought to you by Group 6 #thelight</p>
 
 <form action="/signup" method="POST" name="signup">Signup Form
+  <% if @user && @user.errors.any? %>
+  <%= erb :_errors, layout: false %>
+  <% end %>
 <div>
   <label for="name">Name</label>
   <input id="name" type="text" name="user[name]">
@@ -17,4 +20,3 @@
 </div>
 <input type="submit">
 </form>
-

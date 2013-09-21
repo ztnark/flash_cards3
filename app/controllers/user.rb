@@ -28,9 +28,9 @@ end
 post '/signup' do
   @user = User.new(params[:user])
   if @user.save
-    erb :login
-  else
     erb :index
+  else
+    erb :signup
   end
 end
 
@@ -42,7 +42,7 @@ post '/login' do
   else
     @user = User.new
     @user.errors[:base] = "We didn't like that. Try again."
-    erb :login
+    erb :index
   end
 end
 

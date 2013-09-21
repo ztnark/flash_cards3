@@ -26,7 +26,9 @@
   
   <div class="login">
     <h2>Login & Sign Up</h2>
-
+    <% if @user && @user.errors.any? %>
+    <%= erb :_errors, layout: false %>
+    <% end %>
     <form action='/login' method="POST">
       <input type="text" name="user[email]" placeholder="Email Address">
       <input type="password" name="user[password]" placeholder="Password">
@@ -36,29 +38,3 @@
   </div>
 </body>
 </html>
-
-
-
-<!-- <h1>Welcome to Flashcards!</h1>
-<h3>Brought to you by Group 6 #thelight</h3>
-
-  <% if @user && @user.errors.any? %>
-  <%= erb :_errors, layout: false %>
-  <% end %>
-
-<form action="/signup" method="POST" name="signup">Signup Form
-
-<div>
-  <label for="name">Name</label>
-  <input id="name" type="text" name="user[name]">
-</div>
-<div>
-  <label for="email">Email</label>
-  <input id="email" type="text" name="user[email]">
-</div>
-<div>
-  <label for="password">Password</label>
-  <input id="password" type="password" name="user[password]">
-</div>
-<input type="submit">
-</form> -->
