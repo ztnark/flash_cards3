@@ -1,6 +1,13 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  validates :password, presence: true
+  validates :email, 
+    presence: true, 
+    uniqueness: true, 
+    format: { with: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+  validates :name, presence:true, on :create
+
     has_many :games
 
     include BCrypt
