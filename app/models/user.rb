@@ -2,11 +2,11 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   validates :password, presence: true
-  validates :email, 
+  validates :email,
     presence: true, 
     uniqueness: true, 
     format: { with: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
-  validates :name, presence:true, on :create
+  validates :name, presence:true, on: :create
 
     has_many :games
 
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 
     def self.authenticate(email, password)
       @user = User.find_by_email(email)
-      if @user.password == password
+      if @user && @user.password == password
         @user
       else
         nil
