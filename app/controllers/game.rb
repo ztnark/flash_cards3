@@ -19,6 +19,7 @@ get '/game/:id' do
     @card = @game.deck.cards.first
     if @card == nil
       @game.deck.errors[:base] = "This deck has no cards.."
+      @decks = Deck.all
       erb :welcome
     else
       erb :question

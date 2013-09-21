@@ -17,7 +17,7 @@
 <h2>Select a Deck!</h2>
 <ul class="game">
   <% @decks.each do |deck| %>
-  <li><a href="game/<%= deck.id %>"><%= deck.name %></a></li>
+  <li><a href="http://localhost:9393/game/<%= deck.id %>"><%= deck.name %></a></li>
   <% end %>
 </ul>
 

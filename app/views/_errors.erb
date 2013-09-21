@@ -1,9 +1,16 @@
 
 <div id="error_explanation">
+  <% if @user %>
   <ul>
     <% @user.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
     <% end %>
   </ul>
+  <% elsif @game %>
+ <ul>
+    <% @game.deck.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
 </div>
-
