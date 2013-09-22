@@ -35,12 +35,8 @@ get '/game/question/:id' do
     id_array = @game.deck.cards.find(:all).map(&:id)
     card_number = @game.guesses.all.count
     card_count = @game.deck.cards.count
-    if card_number < card_count
-      @card = Card.find(id_array[card_number])
-      erb :question
-    else
-      redirect "/results/#{session[:id]}"
-    end
+    @card = Card.find(id_array[card_number])
+    erb :question
   else
     redirect '/login'
   end
@@ -52,6 +48,7 @@ get '/answer/:game_id/:card_id/:correct' do
     @game = Game.find(params[:game_id])
     @correct = params[:correct]
     @card = Card.find(params[:card_id])
+    @finished = (@game.guesses.all.count == @game.deck.cards.count)
     erb :answer
   else
     redirect '/login'

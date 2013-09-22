@@ -15,7 +15,7 @@ end
 get '/results/:user_id' do
   if !session[:id].nil?
     @user_games = User.find(params[:user_id]).games.all
-     erb :results
+    erb :results
   else
     redirect '/login'
   end

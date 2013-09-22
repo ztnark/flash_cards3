@@ -7,16 +7,21 @@
   </ul>
 </nav>
 
-
 <div class="game_view">
   <div class="question">
-    <p><%= @card.question %></p>
+    <p>Question: <%= @card.question %></p>
   </div>  
+
   <div class="answer">
-    <p><%= @card.answer %></p>
-  </div> 
-  <div class="answer">
-    <p><%= @correct %></p>
+    <% if @correct == true %>
+    <p id="correct_answer"> YOUR ANSWER <%= @card.answer.upcase %> IS CORRECT! GREAT JOB!</p>
+    <% else %>
+    <p id="wrong_answer">Unfortunately you answered this incorrectly :/  The correct answer was <%= @card.answer %></p>
+    <% end %>
   </div>   
+  <% if @finished %>
+  <a class="see_score" href="/results/<%= session[:id] %>">See Your Results!</a>
+  <% else %>
   <a class="next_question" href="/game/question/<%= @game.id %>">Next Question!</a>
+  <% end %>
 </div>
