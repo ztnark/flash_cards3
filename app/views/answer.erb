@@ -13,7 +13,7 @@
   </div>  
 
   <div class="answer">
-    <% if @correct == true %>
+    <% if @correct == 'true' %>
     <p id="correct_answer"> YOUR ANSWER <%= @card.answer.upcase %> IS CORRECT! GREAT JOB!</p>
     <% else %>
     <p id="wrong_answer">Unfortunately you answered this incorrectly :/  The correct answer was <%= @card.answer %></p>
