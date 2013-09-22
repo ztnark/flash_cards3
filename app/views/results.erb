@@ -19,7 +19,7 @@
  <% correct = x.guesses.where(response: "true").count %>
   <% total = x.guesses.count %>
   <% percent = correct.to_f/total.to_f*100 %>
-  <% scores<< percent%>
+  <% scores << percent%>
 
   <li> Game ID: <%= x.id%> Deck: <%=x.deck.name.capitalize%> Score: <%= percent %>%</li>
  <%  end %>

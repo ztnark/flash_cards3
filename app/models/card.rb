@@ -3,7 +3,7 @@ class Card < ActiveRecord::Base
   belongs_to :deck
 
 def check_answer(user_answer)
-  self.answer == user_answer
+  self.answer.downcase == user_answer.downcase
 end
 
 
