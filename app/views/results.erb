@@ -5,7 +5,6 @@
 <nav>
   <a class="logo" href="/welcome">Logo</a>
   <ul>
-    <li><a href="/results/<%= session[:id]%>">View Past Results</a></li>
     <li><a href="/logout">Logout</a></li>
   </ul>
 </nav>
@@ -21,7 +20,7 @@
   <% percent = correct.to_f/total.to_f*100 %>
   <% scores << percent%>
 
-  <li> Game Number: <%= (index + 1) %> Deck: <%=x.deck.name.capitalize%> Score: <%= percent %>%</li>
+  <li> Game Number: <%= (index + 1) %> Score: <%= percent %>%</li>
  <%  end %>
 
 </ul>
