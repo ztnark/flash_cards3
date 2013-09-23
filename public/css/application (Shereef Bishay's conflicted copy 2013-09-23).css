@@ -243,20 +243,15 @@ body{
 
 .nav_bar {
   width: 100%;
-  margin: 10px 0 0 0;
   /*float: right;*/
 }
 
-.nav_bar ul li {
+.nav_bar li {
   display: inline;
-  margin-left: 20px;
 }
 
 .nav_bar ul {
   float: right;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 
