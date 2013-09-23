@@ -1,17 +1,13 @@
 
-<h1>Welcome to Flashcards!</h1>
-<p>Brought to you by Group 6 #thelight</p>
-
-<div class="signup"
-<form action="/signup" method="POST" name="signup">
+<div class="signup">
+<form action="/signup" method="POST" >
+  <h2>Sign Up Here!</h2>
   <% if @user && @user.errors.any? %>
   <%= erb :_errors, layout: false %>
   <% end %>
-  <h2>Sign Up Here!</h2>
   <input type="text" name="user[name]" placeholder="Name">
   <input type="text" name="user[email]" placeholder="Email Address">
   <input type="password" name="user[password]" placeholder="Password">
-  <input type="submit">
-</div>
-
+  <input type="submit" class="signup_confirm">
 </form>
+</div>

@@ -28,7 +28,7 @@ end
 post '/signup' do
   @user = User.new(params[:user])
   if @user.save
-    erb :index
+    erb :index, layout: false
   else
     erb :signup
   end
