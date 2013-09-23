@@ -93,9 +93,10 @@ body{
   .login{
     width: 400px;
     margin: 0 auto;
-    padding: 30px 0 50px 0;
+    padding: 30px 0 30px 0;
     background: #fff;
     border-radius: 5px;
+    margin-bottom: 50px;
 
     -moz-box-shadow:    0 1px 3px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -141,6 +142,36 @@ body{
       box-shadow:         0 3px 0 #2F9DCC;
     }
       .login_button:hover{
+        background: #FF6600;
+        -moz-box-shadow:    0 3px 0 #CC621B;
+        -webkit-box-shadow: 0 3px 0 #CC621B;
+        box-shadow:         0 3px 0 #CC621B;
+      }
+    
+    .signup_button{
+      width: 314px;
+      height: 40px;
+      margin: 10px auto;
+      font: bold 20px arial;
+      padding: 0 3px 0 3px;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      color: #fff;
+      font-family: opensansbold;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      background: #FF1F4C;
+      text-decoration: none;
+      overflow: hidden;
+      text-align: center;
+      line-height: 40px;
+
+      -moz-box-shadow:    0 3px 0 #BE0026;
+      -webkit-box-shadow: 0 3px 0 #BE0026;
+      box-shadow:         0 3px 0 #BE0026;
+    }
+      .signup_button:hover{
         background: #FF6600;
         -moz-box-shadow:    0 3px 0 #CC621B;
         -webkit-box-shadow: 0 3px 0 #CC621B;
